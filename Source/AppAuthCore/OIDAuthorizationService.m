@@ -635,7 +635,7 @@ NS_ASSUME_NONNULL_BEGIN
       }
 
       // Only relevant for the authorization_code response type
-      if ([tokenResponse.request.grantType isEqual:OIDGrantTypeAuthorizationCode]) {
+      //if ([tokenResponse.request.grantType isEqual:OIDGrantTypeAuthorizationCode]) {
         // OpenID Connect Core Section 3.1.3.7. rule #11
         // Validates the nonce.
         //NSString *nonce = authorizationResponse.request.nonce;
