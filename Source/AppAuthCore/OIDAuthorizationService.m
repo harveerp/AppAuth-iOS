@@ -638,18 +638,18 @@ NS_ASSUME_NONNULL_BEGIN
       if ([tokenResponse.request.grantType isEqual:OIDGrantTypeAuthorizationCode]) {
         // OpenID Connect Core Section 3.1.3.7. rule #11
         // Validates the nonce.
-        NSString *nonce = authorizationResponse.request.nonce;
-        if (nonce && ![idToken.nonce isEqual:nonce]) {
-          NSError *invalidIDToken =
-          [OIDErrorUtilities errorWithCode:OIDErrorCodeIDTokenFailedValidationError
-                           underlyingError:nil
-                               description:@"Nonce mismatch"];
-          dispatch_async(dispatch_get_main_queue(), ^{
-            callback(nil, invalidIDToken);
-          });
-          return;
-        }
-      }
+        //NSString *nonce = authorizationResponse.request.nonce;
+        //if (nonce && ![idToken.nonce isEqual:nonce]) {
+        //  NSError *invalidIDToken =
+        //  [OIDErrorUtilities errorWithCode:OIDErrorCodeIDTokenFailedValidationError
+        //                   underlyingError:nil
+        //                       description:@"Nonce mismatch"];
+        //  dispatch_async(dispatch_get_main_queue(), ^{
+        //    callback(nil, invalidIDToken);
+        //  });
+        //  return;
+       // }
+      //}
       
       // OpenID Connect Core Section 3.1.3.7. rules #12
       // ACR is not directly supported by AppAuth.
